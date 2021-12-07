@@ -2,5 +2,49 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "timeline": {
+      "projectType": "library",
+      "root": "projects/timeline",
+      "sourceRoot": "projects/timeline/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/timeline/tsconfig.lib.json",
+            "project": "projects/timeline/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/timeline/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/timeline/src/test.ts",
+            "tsConfig": "projects/timeline/tsconfig.spec.json",
+            "karmaConfig": "projects/timeline/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/timeline/tsconfig.lib.json",
+              "projects/timeline/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "cli": {
+    "analytics": "0103bfee-8caa-4e01-a56a-39a13e75d8ae"
+  },
+  "defaultProject": "timeline"
 }
