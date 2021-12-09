@@ -1,0 +1,16 @@
+.bullet-item {
+  display: block;
+
+  p {
+    text-align: center;
+  }
+}
+.bullet {
+  margin: auto;
+  border-radius: 50%;
+  background-color: darkblue;
+}
+
+.bullet:hover {
+  background-color: cadetblue;
+}
