@@ -1,5 +1,5 @@
 export interface ChronologyData {
-  date: number;
+  date: Date|number;
   name: string;
   description: string;
   title: string;
