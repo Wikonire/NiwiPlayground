@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { DataBulletComponent } from './data-bullet/data-bullet.component';
 import { CommonModule } from '@angular/common';
 import { ChronologyComponent } from './chronology/chronology.component';
-import { BrowserModule } from '@angular/platform-browser';
 import { LineComponent } from './line/line.component';
 import { BulletSettingComponent } from './bullet-setting/bullet-setting.component';
 import { MatInputModule } from '@angular/material/input';
@@ -15,7 +14,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 	declarations: [DataBulletComponent, ChronologyComponent, LineComponent, BulletSettingComponent],
 	imports: [
 		CommonModule,
-		BrowserModule,
 		MatInputModule,
 		ReactiveFormsModule,
 		MatFormFieldModule,
