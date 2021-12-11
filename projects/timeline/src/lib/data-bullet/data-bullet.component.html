@@ -1,5 +1,31 @@
 <div class="bullet-item">
-	<p>{{ name }}</p>
-	<div [ngStyle]="{ width: diameter + 'px', height: diameter + 'px' }" class="bullet"></div>
-	<p>{{ timePoint }}</p>
+	<div class='block' [ngStyle]="{ width: diameter + 'px', height: diameter + 'px' }">
+		<p *ngIf="showDate !== 'never' &&
+			(showName === 'always'
+			|| (showName === 'byClick'
+			&& activePoints
+			&& activePoints.includes(id))
+			|| (showName === 'byHover'
+			&& hoveredPoint
+			&& hoveredPoint===id))">
+			{{ name }}
+		</p>
+	</div>
+	<div
+		(click)='pointClicked.emit(id)'
+		(mouseenter)="pointHovered.emit(id)"
+		(mouseleave)="pointHovered.emit()"
+		[ngStyle]="{ width: diameter + 'px', height: diameter + 'px' }"
+		class="bullet" [ngClass]='{"cursor-pointer":showDate === "byClick"||showDate === "byHover"
+		||showName === "byClick"||showName === "byHover"}'>
+	</div>
+	<div  class='block'
+				[ngStyle]="{ width: diameter + 'px', height: diameter + 'px' }">
+		<p *ngIf="showDate !== 'never' &&
+			(showDate === 'always'
+			|| (showDate === 'byClick' && activePoints && activePoints.includes(id))
+			|| (showDate === 'byHover' && hoveredPoint && hoveredPoint===id))">
+			{{ timePoint }}
+		</p>
+	</div>
 </div>

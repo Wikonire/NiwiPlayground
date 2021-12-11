@@ -1,17 +1,25 @@
 <div class="chronology" [ngStyle]="chronologyStyles">
-	<lib-line [ngStyle]="{ 'grid-column': '-1' + '/' + (dataSource.length + 1) }"></lib-line>
+	<lib-line [ngStyle]="timelineStyles"></lib-line>
 	<div
 		*ngFor="let data of dataSource; index as i"
 		class="data-bullet"
-		[ngStyle]="{ 'grid-column': i + 1 + '/' + (i + 1), 'min-width': diameter }"
+		[ngStyle]="{ 'grid-column': i + 1 + '/' + (i + 1), 'width': diameter+'px' }"
 	>
 		<lib-data-bullet
 			*ngIf="data?.date"
-			[diameter]="20"
+			[diameter]="diameter"
 			[name]="data.name"
 			[title]="data.name"
 			[timePoint]="data.date.toString()"
 			[showDate]="showDate"
+			[showName]='showName'
+			[id]='i'
+			[activePoints]='visiblePerClick'
+			[hoveredPoint]='hoveredPoint'
+			(pointHovered)='changeHoveredPoint($event)'
+			(pointClicked)='changeActiveBulletState($event)'
 		></lib-data-bullet>
 	</div>
 </div>
+<button (click)='showAddBullet()'>+</button>
+<lib-bullet-setting ></lib-bullet-setting>

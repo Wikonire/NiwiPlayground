@@ -21,7 +21,6 @@ export class AppComponent implements OnInit {
 
 	ngOnInit(): void {
 		for (let i = 1; i <= 30; i++) {
-			console.log(this.dateElements);
 			this.dateElements.push(i);
 		}
 

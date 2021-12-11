@@ -8,15 +8,17 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-		"prettier-format": "prettier --write ./projects/**/src"
+    "prettier-format": "prettier --write ./projects/**/src"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.2.14",
+    "@angular/cdk": "^12.2.13",
     "@angular/common": "~12.2.14",
     "@angular/compiler": "~12.2.14",
     "@angular/core": "~12.2.14",
     "@angular/forms": "~12.2.14",
+    "@angular/material": "^12.2.13",
     "@angular/platform-browser": "~12.2.14",
     "@angular/platform-browser-dynamic": "~12.2.14",
     "@angular/router": "~12.2.14",
@@ -24,16 +26,16 @@
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
   },
-	"prettier": {
-		"singleQuote": true,
-		"printWidth": 120,
-		"useTabs": true,
-		"tabWidth": 2,
-		"semi": true,
-		"bracketSpacing": true,
-		"trailingComma": "none",
-		"endOfLine": "auto"
-	},
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120,
+    "useTabs": true,
+    "tabWidth": 2,
+    "semi": true,
+    "bracketSpacing": true,
+    "trailingComma": "none",
+    "endOfLine": "auto"
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1002.3",
     "@angular-eslint/builder": "12.7.0",

@@ -5,8 +5,6 @@ export interface TimelinePoint {
 	pointDataDescription?: PointDescription;
 }
 
-export type ShowDateType = 'always' | 'byClick' | 'byHover' | 'never';
-
 export interface PointDescription {
 	description: string;
 	title: string;

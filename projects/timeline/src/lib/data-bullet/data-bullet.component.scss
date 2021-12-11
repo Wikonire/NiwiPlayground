@@ -1,3 +1,22 @@
+.date {
+	height: 100%;
+	width: 100%;
+}
+.cursor-pointer{
+	cursor: pointer;
+}
+
+.block {
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
+	display: block;
+	height: 100%;
+	p {
+		margin-top: 0.25rem;
+		margin-bottom: 0.25rem;
+	}
+}
+
 .bullet-item {
 	display: block;
 
