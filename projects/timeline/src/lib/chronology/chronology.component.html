@@ -1,8 +1,17 @@
-
-<div class="chronology" [ngStyle]="{'display':'grid', 'grid-template-column': 'repeat('+dataSource.length+', 1fr)'}">
-  <lib-line [ngStyle]="{'grid-column':'-1'+ '/' +(dataSource.length+1)}"></lib-line>
-  <div *ngFor="let data of dataSource; index as i" class="data-bullet" [ngStyle]="{'grid-column': (i+1)+'/'+(i+1), 'width': width}">
-    <lib-data-bullet *ngIf="data?.date" [width]="20" [name]="data.name" [title]="data.name" [timePoint]="data.date.toString()"></lib-data-bullet>
-  </div>
+<div class="chronology" [ngStyle]="chronologyStyles">
+	<lib-line [ngStyle]="{ 'grid-column': '-1' + '/' + (dataSource.length + 1) }"></lib-line>
+	<div
+		*ngFor="let data of dataSource; index as i"
+		class="data-bullet"
+		[ngStyle]="{ 'grid-column': i + 1 + '/' + (i + 1), 'min-width': diameter }"
+	>
+		<lib-data-bullet
+			*ngIf="data?.date"
+			[diameter]="20"
+			[name]="data.name"
+			[title]="data.name"
+			[timePoint]="data.date.toString()"
+			[showDate]="showDate"
+		></lib-data-bullet>
+	</div>
 </div>
-

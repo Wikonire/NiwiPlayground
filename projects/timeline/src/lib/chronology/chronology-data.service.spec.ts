@@ -3,14 +3,14 @@ import { TestBed } from '@angular/core/testing';
 import { ChronologyDataService } from './chronology-data.service';
 
 describe('ChronologyDataService', () => {
-  let service: ChronologyDataService;
+	let service: ChronologyDataService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(ChronologyDataService);
-  });
+	beforeEach(() => {
+		TestBed.configureTestingModule({});
+		service = TestBed.inject(ChronologyDataService);
+	});
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+	it('should be created', () => {
+		expect(service).toBeTruthy();
+	});
 });

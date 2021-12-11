@@ -1,17 +1,11 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'lib-line',
-  templateUrl: './line.component.html',
-  styleUrls: ['./line.component.scss']
+	selector: 'lib-line',
+	templateUrl: './line.component.html',
+	styleUrls: ['./line.component.scss']
 })
-export class LineComponent implements OnInit {
-  @Input() width = 200;
-  @Input() height = 5;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class LineComponent {
+	@Input() width = 200;
+	@Input() height = 5;
 }

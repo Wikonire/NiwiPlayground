@@ -1,20 +1,15 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ShowDateType } from '../chronology/chronology-data.interface';
 
 @Component({
-  selector: 'lib-data-bullet',
-  templateUrl: './data-bullet.component.html',
-  styleUrls: ['./data-bullet.component.scss']
+	selector: 'lib-data-bullet',
+	templateUrl: './data-bullet.component.html',
+	styleUrls: ['./data-bullet.component.scss']
 })
-export class DataBulletComponent implements OnInit {
-
-  @Input() width = 40;
-  @Input() name = '';
-  @Input() title = '';
-  @Input() timePoint = '';
-
-  constructor() { }
-
-  ngOnInit(): void {
-     }
-
+export class DataBulletComponent {
+	@Input() diameter = 40;
+	@Input() name = '';
+	@Input() title = '';
+	@Input() timePoint = '';
+	@Input() showDate: ShowDateType = 'always';
 }

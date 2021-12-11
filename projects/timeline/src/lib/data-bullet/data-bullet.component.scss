@@ -1,16 +1,16 @@
 .bullet-item {
-  display: block;
+	display: block;
 
-  p {
-    text-align: center;
-  }
+	p {
+		text-align: center;
+	}
 }
 .bullet {
-  margin: auto;
-  border-radius: 50%;
-  background-color: darkblue;
+	margin: auto;
+	border-radius: 50%;
+	background-color: darkblue;
 }
 
 .bullet:hover {
-  background-color: cadetblue;
+	background-color: cadetblue;
 }

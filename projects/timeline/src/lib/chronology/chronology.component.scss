@@ -1,32 +1,32 @@
 .chronology {
-  overflow-y: auto;
-  flex-direction: row;
-  height: 50%;
-  background-color: azure;
-  width: 100%;
-  align-items: center;
+	overflow-y: auto;
+	flex-direction: row;
+	height: 50%;
+	background-color: azure;
+	width: 100%;
+	align-items: center;
 }
 
-.button-space{
-  width: 10px;
-  height: 10px;
+.button-space {
+	width: 10px;
+	height: 10px;
 }
-.addbutton{
+.addbutton {
 }
 
 .addbutton:hover {
-  visibility: visible;
+	visibility: visible;
 }
 
 lib-line {
-  width: 100%;
-  justify-content: stretch;
-  grid-row: 1;
+	width: 100%;
+	justify-content: stretch;
+	grid-row: 1;
 }
-.data-bullet{
-  margin: auto;
-  width: 30px;
-  grid-row: 1;
-  display: block;
-  align-content: center;
+.data-bullet {
+	margin: auto;
+	width: 30px;
+	grid-row: 1;
+	display: block;
+	align-content: center;
 }
