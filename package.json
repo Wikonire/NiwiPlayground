@@ -7,34 +7,23 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "prettier-format": "prettier --write ./projects/**/src"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.1.0",
-    "@angular/cdk": "^12.2.13",
+    "@angular/cdk": "^13.1.0",
     "@angular/common": "~13.1.0",
     "@angular/compiler": "~13.1.0",
     "@angular/core": "~13.1.0",
     "@angular/forms": "~13.1.0",
-    "@angular/material": "^12.2.13",
+    "@angular/material": "^13.1.0",
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "printWidth": 120,
-    "useTabs": true,
-    "tabWidth": 2,
-    "semi": true,
-    "bracketSpacing": true,
-    "trailingComma": "none",
-    "endOfLine": "auto"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.1.1",
@@ -50,8 +39,6 @@
     "@typescript-eslint/eslint-plugin": "4.28.2",
     "@typescript-eslint/parser": "4.28.2",
     "eslint": "^7.26.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.3.9",
@@ -60,7 +47,6 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "ng-packagr": "^13.1.1",
-    "prettier": "^2.5.1",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "typescript": "~4.5.3"
